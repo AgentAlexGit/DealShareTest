@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-   >
+    android:layout_marginBottom="2dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="2dp"
+    android:padding="10dp"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="0dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +31,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/dealTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Title"
@@ -32,7 +39,7 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/dealSubtitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Name"
@@ -42,11 +49,11 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/dealPoster"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="right"
+                android:gravity="end"
                 android:text="TextView"
                 android:textColor="@color/colorPrimary" />
 
@@ -64,23 +71,21 @@
                 android:layout_weight="1">
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/dealImage"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:srcCompat="@android:color/holo_orange_light" />
 
-                <EditText
-                    android:id="@+id/editText"
+                <TextView
+                    android:id="@+id/dealTags"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:background="@color/colorAccent"
-                    android:ems="10"
-                    android:inputType="textMultiLine"
-                    android:text="Tags: Test Test Test"
+                    android:paddingVertical="5dp"
                     android:textColor="@color/colorPrimary"
-                    android:textColorLink="@color/colorPrimary"
-                    android:textSize="13sp" />
+                    tools:text="Tags: Test Test Tst" />
+
             </FrameLayout>
 
             <LinearLayout
@@ -96,33 +101,31 @@
                 android:showDividers="none">
 
                 <TextView
-                    android:id="@+id/textView10"
+                    android:id="@+id/dealDistance"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
+                    android:drawableLeft="@android:drawable/ic_menu_mylocation"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@android:drawable/ic_menu_mylocation"
+                    android:gravity="left|center_vertical"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/dealFavorites"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:drawableLeft="@android:drawable/ic_menu_mylocation"
                     android:drawablePadding="10dp"
                     android:gravity="left|center_vertical"
                     android:text="TextView" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/dealShares"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:drawableLeft="@android:drawable/ic_menu_mylocation"
-                    android:drawablePadding="10dp"
-                    android:gravity="left|center_vertical"
-                    android:text="TextView" />
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
                     android:drawableLeft="@android:drawable/ic_menu_mylocation"
                     android:drawablePadding="10dp"
                     android:gravity="left|center_vertical"
@@ -132,12 +135,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="bottom"
-                    android:layout_weight="1"
                     android:orientation="horizontal"
                     android:paddingTop="10dp">
 
                     <ImageButton
-                        android:id="@+id/imageButton3"
+                        android:id="@+id/favoriteBut"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -145,7 +147,7 @@
                         app:srcCompat="@android:drawable/ic_menu_share" />
 
                     <ImageButton
-                        android:id="@+id/imageButton2"
+                        android:id="@+id/bookmarkBut"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -153,7 +155,7 @@
                         app:srcCompat="@android:drawable/ic_menu_share" />
 
                     <ImageButton
-                        android:id="@+id/imageButton"
+                        android:id="@+id/shareBut"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -167,4 +169,4 @@
 
     </LinearLayout>
 
-</>
+</android.support.v7.widget.CardView>
